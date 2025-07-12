@@ -1,36 +1,38 @@
 #include <stdio.h>
-#define linhas 10 //carlos daniel 
-#define colunas 10
-
+//carlos daniel 11/07/2025
 int main() {
-    int tabuleiro[linhas][colunas];
+    int tabuleiro[10][10];  // Criando o tabuleiro 10x10
 
-    // Inicializa todas as posições com 0 (água)
-    for (int i = 0; i < linhas; i++) {
-        for (int j = 0; j < colunas; j++) {
+    // Inicializando o tabuleiro com 0 (tudo água)
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
             tabuleiro[i][j] = 0;
-            tabuleiro[1][2] = 3;
-            tabuleiro[8][8] = 3;
-            tabuleiro[4][5] = 3;
-
         }
     }
 
-    // Imprime o cabeçalho das colunas com letras
-    printf("  "); // espaço para alinhar com os números das linhas
-    for (char letra = 'A'; letra < 'A' + colunas; letra++) {
-        printf(" %c", letra);
-    }
-    printf("\n");
+    // Posicionando um navio horizontal (3 espaços) na linha 2, colunas 1 a 3
+    tabuleiro[2][1] = 1;
+    tabuleiro[2][2] = 1;
+    tabuleiro[2][3] = 1;
 
-    // Imprime as linhs
-    for (int i = 0; i < linhas; i++) {
-        printf("%d ", i); // número da linha
-        for (int j = 0; j < colunas; j++) {
-            printf(" %d", tabuleiro[i][j]);
-        }
-        printf("\n");
-    }
+    // Posicionando um navio vertical (4 espaços) na coluna 5, linhas 5 a 8
+    tabuleiro[5][5] = 2;
+    tabuleiro[6][5] = 2;
+    tabuleiro[7][5] = 2;
+    tabuleiro[8][5] = 2;
+
+    // Mostrando as coordenadas do navio horizonta
+    printf("Coordenadas do navio horizontal (valor 1):\n");
+    printf("(2, 1)\n");
+    printf("(2, 2)\n");
+    printf("(2, 3)\n");
+
+    // Mostrando as coordenadas do naio vertical
+    printf("\nCoordenadas do navio vertical (valor 2):\n");
+    printf("(5, 5)\n");
+    printf("(6, 5)\n");
+    printf("(7, 5)\n");
+    printf("(8, 5)\n");
 
     return 0;
 }
