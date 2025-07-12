@@ -9,13 +9,13 @@ int main() {
     for (int i = 0; i < linhas; i++) {
         for (int j = 0; j < colunas; j++) {
             tabuleiro[i][j] = 0;
-            
+
             tabuleiro[1][2] = 3;
             tabuleiro[8][8] = 3;
             tabuleiro[4][5] = 3;
             tabuleiro[2][3] = 3;
 
-        }
+        } 
     }
 
     // Imprime o cabeçalho das colunas com letras
