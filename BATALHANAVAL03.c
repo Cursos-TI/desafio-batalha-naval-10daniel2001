@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>  //nivel mestre 
 #define TAM 5 // Tamanho das matrizes de habilidades
 
 void mostrarMatriz(int matriz[TAM][TAM], char nome[]) {
